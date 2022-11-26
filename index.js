@@ -21,7 +21,9 @@ async function loadmorePosts(){
    
 }
 function makeNodesFromPosts(){
-
+    
+    const preveousLast = document.querySelector('.lastPost')
+    if (preveousLast) postObserver.unobserve(preveousLast)
   newPosts.forEach((post,i)=>{
     const postElement = document.createElement('div')
     const postTitle = document.createElement('h1')
@@ -34,6 +36,7 @@ function makeNodesFromPosts(){
     postsList.childNodes.forEach(e=> e.classList?.remove('lastPost'))
     if (i === newPosts.length-1){
         console.log(postsList.childNodes)
+        
         postElement.classList.add('lastPost')
         const lastPost = document.querySelector('.lastPost')
         postObserver.observe(lastPost)
