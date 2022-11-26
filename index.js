@@ -61,7 +61,7 @@ const postObserver = new IntersectionObserver((obs)=>{
             
         }
 },{
-    threshold:1
+    threshold:0.5
 })
 
 

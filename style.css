@@ -82,6 +82,7 @@ h1 {
   animation-duration: 1s;
   animation-iteration-count: infinite;
   width: 50%;
+  color: #242424;
 }
 
 @keyframes slide {
